@@ -17,7 +17,7 @@ open class DOFavoriteButton: UIButton {
     fileprivate var imageShape: CAShapeLayer!
     @IBInspectable open var image: UIImage! {
         didSet {
-            createLayers(image: image)
+            createLayers(image)
         }
     }
     @IBInspectable open var imageColorOn: UIColor! = UIColor(red: 255/255, green: 172/255, blue: 51/255, alpha: 1.0) {
@@ -93,17 +93,17 @@ open class DOFavoriteButton: UIButton {
     public init(frame: CGRect, image: UIImage!) {
         super.init(frame: frame)
         self.image = image
-        createLayers(image: image)
+        createLayers(image)
         addTargets()
     }
 
     public required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
-        createLayers(image: UIImage())
+        createLayers(UIImage())
         addTargets()
     }
 
-    fileprivate func createLayers(image: UIImage!) {
+    fileprivate func createLayers(_ image: UIImage!) {
         self.layer.sublayers = nil
 
         let imageFrame = CGRect(x: frame.size.width / 2 - frame.size.width / 4, y: frame.size.height / 2 - frame.size.height / 4, width: frame.size.width / 2, height: frame.size.height / 2)
