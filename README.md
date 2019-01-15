@@ -1,3 +1,5 @@
+Fork updated for Swift 4.2
+
 # DOFavoriteButton
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Version](https://img.shields.io/cocoapods/v/DOFavoriteButton.svg?style=flat)](http://cocoapods.org/pods/DOFavoriteButton)
@@ -10,7 +12,7 @@ It could be just right for favorite buttons!
 
 ## Requirements
 * iOS 7.0+
-* Swift 1.2
+* Swift 4.2
 
 ## Installation
 #### Carthage

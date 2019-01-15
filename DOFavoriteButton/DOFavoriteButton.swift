@@ -124,7 +124,7 @@ open class DOFavoriteButton: UIButton {
         circleMask = CAShapeLayer()
         circleMask.bounds = imageFrame
         circleMask.position = imgCenterPoint
-        circleMask.fillRule = kCAFillRuleEvenOdd
+        circleMask.fillRule = .evenOdd
         circleShape.mask = circleMask
 
         let maskPath = UIBezierPath(rect: imageFrame)
@@ -152,8 +152,8 @@ open class DOFavoriteButton: UIButton {
                 //CGPathAddLineToPoint(path, nil, lineFrame.origin.x + lineFrame.width / 2, lineFrame.origin.y)
                 return path
                 }()
-            line.lineCap = kCALineCapRound
-            line.lineJoin = kCALineJoinRound
+            line.lineCap = .round
+            line.lineJoin = .round
             line.strokeStart = 0.0
             line.strokeEnd = 0.0
             line.opacity = 0.0
@@ -340,11 +340,11 @@ open class DOFavoriteButton: UIButton {
         //===============
         // add target
         //===============
-        self.addTarget(self, action: #selector(DOFavoriteButton.touchDown(_:)), for: UIControlEvents.touchDown)
-        self.addTarget(self, action: #selector(DOFavoriteButton.touchUpInside(_:)), for: UIControlEvents.touchUpInside)
-        self.addTarget(self, action: #selector(DOFavoriteButton.touchDragExit(_:)), for: UIControlEvents.touchDragExit)
-        self.addTarget(self, action: #selector(DOFavoriteButton.touchDragEnter(_:)), for: UIControlEvents.touchDragEnter)
-        self.addTarget(self, action: #selector(DOFavoriteButton.touchCancel(_:)), for: UIControlEvents.touchCancel)
+        self.addTarget(self, action: #selector(DOFavoriteButton.touchDown(_:)), for: .touchDown)
+        self.addTarget(self, action: #selector(DOFavoriteButton.touchUpInside(_:)), for: .touchUpInside)
+        self.addTarget(self, action: #selector(DOFavoriteButton.touchDragExit(_:)), for: .touchDragExit)
+        self.addTarget(self, action: #selector(DOFavoriteButton.touchDragEnter(_:)), for: .touchDragEnter)
+        self.addTarget(self, action: #selector(DOFavoriteButton.touchCancel(_:)), for: .touchCancel)
     }
 
     @objc func touchDown(_ sender: DOFavoriteButton) {
